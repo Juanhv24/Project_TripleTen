@@ -8,8 +8,8 @@ df = pd.read_csv('vehicles_us.csv')
 # Configurar la página de Streamlit
 st.header("Vehiculos en USA")
 
-# Crear un boton en la aplicación Streamlit
-hist_button = st.button("Construir Histograma")
+# Crear un checkbox en la aplicación Streamlit
+hist_button = st.checkbox("Construir Histograma")
 
 # Lógica a ejecutar cuando se hace clic en el botón
 if hist_button:
@@ -26,8 +26,8 @@ if hist_button:
     # Mostrar el gráfico en plotly interactivo en la aplicación streamlit
     st.plotly_chart(fig, use_container_width=True)
 
-# Crear un boton de dispersión en la aplicación Streamlit
-scatter_button = st.button("Construir gráfico de dispersión")
+# Crear un checkbox de dispersión en la aplicación Streamlit
+scatter_button = st.checkbox("Construir gráfico de dispersión")
 
 if scatter_button:
     st.write("Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches en USA")
